@@ -50,9 +50,9 @@ List of bugs:
 	Fix method:
 	When a bullet is fired, both it and the moving enemies are dependent on the current tick
 		![[Pasted image 20250518182301.png]]
-	But it is this very fact, that results in an issue when **both objects move in the same tick**.
-	
-		![[Pasted image 20250514095455.png]]
+	But it is this very fact, that results in an issue when **both objects move in the same tick**. For example:
+		![[Comparison.png]]
+	Given that the only result of this bug is the bullet being one position above the enemy, we can fix this by 
 	
 3. [ ] Press enter to start
 4. [ ] No area handling for bountry exception
