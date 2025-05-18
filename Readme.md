@@ -46,15 +46,16 @@ List of bugs:
 		1. Not implemented, as it would result in a worse bug
 	4. Ship x Asteroid
 		1. Same as Enemy
+		
 	Fix method:
 	When a bullet is fired, both it and the moving enemies are dependent on the current tick
-	ds
-		![[Pasted image 20250514095137.png]]
-	But it is this very fact, that results in an issue when both objects move in the same tick, 
+		![[Pasted image 20250518182301.png]]
+	But it is this very fact, that results in an issue when **both objects move in the same tick**.
+	
 		![[Pasted image 20250514095455.png]]
 	
-2. [ ] Press enter to start
-3. [ ] No area handling for bountry exception
-4. [ ] Two bullets hitting an object at the same time
+3. [ ] Press enter to start
+4. [ ] No area handling for bountry exception
+5. [ ] Two bullets hitting an object at the same time
 	1. Destroy both bullets due to interpretation of javadocs
-5. [ ] Time elapsed while game is paused
+6. [ ] Time elapsed while game is paused
