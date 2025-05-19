@@ -1,39 +1,29 @@
+## Component #1: Code Design
 
-1. [ ] Achievement package must be implemented
-	1. Implement Achievement interface
-		``` 
-		public interface Achievement { ... }
-		```
-	2. Implement AchievementFile interface
-	3. Implement AchievementManager class
-	4. Implement GameAchievement class
-	5. Implement FileHandler class
-	6. Implement PlayerStats tracker
-2. [ ] Implement missing methods in GameModel
-	1. Implement 'statsTracker' input for gameModel 
-	2. Implement Verbose variable, and getVerbose method
-	3. Implement isGameOver method
-	4. Implement 
-	5. Add recordShotFired to fireBullet
-	6. Add recordShotHit to collision
-	7. Implement achievements on each tick
-	8. Imple
-3. [ ] Implement missing methods in GameController
-	1. Implement getModel
-		1. 
-			
-	2. Implement getStatsTracker
-		1. Requires implementing gameModel.getStatsTracker.
-	3. Implement RefreshAchievements
-		1. Catch the edge case of going over-progress of achievements
-	4. Implement fix of two bullets hitting an object at the same time
-	5. 
-4. [ ] Implement Assets folder
-5. [ ] Implement fix to check collistion
-	1. Remove bullet when collide with asteroid
-6. [ ] Implement 
 
-------------------------
+Optimisations:
+1. Switching HandlePlayerInput to a switch for optimal runtime and code efficiency
+	1. ![[Pasted image 20250519121624.png]]
+	2. ![[Pasted image 20250519123049.png]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----
+## Component 2: Limitations
 
 List of bugs:
 1. [x] Entity phasing on tick
@@ -61,7 +51,7 @@ List of bugs:
 	  
 	  This should work without fault, as there is no edge cases where the bullet would be above an enemy without it meaning to collide with it.
 	
-	ssues that arise when implementing:
+	Issues that arise when implementing:
 	- Can a ship fire a bullet above the enemy?
 		No, since the bullet spawning method makes a bullet above at the ship's x and y+1 position and thus spawning above the ship.
 		Hence, for a bullet to spawn above the enemy, the ship must be in the same position as  the enemy which **SHOULD** cause a collision between ship and enemy before the bullet
@@ -114,12 +104,80 @@ List of bugs:
 	Classes to fix:
 	1. PlayerStatsManager
 		1. Implement a Boolean that will allow the elapsed time to keep on ticking
+6. [x] Ensure pausing the game has a toggled log 
+	- i.e instead of logging "Game is paused!" on every pause press, it should alternate between 
+		- "Game is paused!"
+		- "Game is unpaused!"
+	
+	Fix:
+	- Create a new method in gameModel, that returns a togglable state of isPaused
+7. [x] Ensure pausing the game restricts the player's movement as the java docs state:
+	- "When the game is paused, only un-pausing should be possible. No other action of printing should occur."
+	Fix:
+	- Use return statement to break out of the method if the game is paused, hence blocking all input aside from un-pausing the game.
+	- ![[Pasted image 20250519132919.png]]
+	
+	Fix:
+	- Like the gameStarting block, create an if statement that blocks the functionality of the handlePlayerInput function if the game is paused
+8. [x] Add the toString method implemented in a2 the ObjectsWithPosition
+	1. 
+9. [x] Remove the string output for powerups:
+	1. HealthPowerUP
+		![[Pasted image 20250519140825.png]]
+	2. ShieldPowerUp
+		![[Pasted image 20250519141005.png]]
+10. [x] Implement descending movement for powerups
+	fix:
+	- Change the actions on tick to move downwards every 10 ticks
+11. [x] For all tick-based movement, since the javadocs say 'every 10 ticks', it should not move on the initial tick so the operation used: 
+	- "tick % 10 == 0" must be changed to
+	- "tick % 10 == 0 && tick != 0" 
+	This change is implemented to:
+	1. Descending Enemies
+	2. Powerups
+
+
+------
+## Component 3: JUnit Tests
+
+
+
 
 
 ------
 
-Optimisations:
-1. Switching HandlePlayerInput to a switch for optimal runtime and code efficiency
-	1. ![[Pasted image 20250519121624.png]]
-	2. ![[Pasted image 20250519123049.png]]
-2. 
+## Component 4: Implementation
+
+1. [ ] Achievement package must be implemented
+	1. Implement Achievement interface
+		``` 
+		public interface Achievement { ... }
+		```
+	2. Implement AchievementFile interface
+	3. Implement AchievementManager class
+	4. Implement GameAchievement class
+	5. Implement FileHandler class
+	6. Implement PlayerStats tracker
+2. [ ] Implement missing methods in GameModel
+	1. Implement 'statsTracker' input for gameModel 
+	2. Implement Verbose variable, and getVerbose method
+	3. Implement isGameOver method
+	4. Implement 
+	5. Add recordShotFired to fireBullet
+	6. Add recordShotHit to collision
+	7. Implement achievements on each tick
+	8. Imple
+3. [ ] Implement missing methods in GameController
+	1. Implement getModel
+		1. 
+			
+	2. Implement getStatsTracker
+		1. Requires implementing gameModel.getStatsTracker.
+	3. Implement RefreshAchievements
+		1. Catch the edge case of going over-progress of achievements
+	4. Implement fix of two bullets hitting an object at the same time
+	5. 
+4. [ ] Implement Assets folder
+5. [ ] Implement fix to check collistion
+	1. Remove bullet when collide with asteroid
+6. [ ] Implement 
