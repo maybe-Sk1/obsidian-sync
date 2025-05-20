@@ -1,4 +1,10 @@
+# A2 Justification Document
 
+#### This document is structured with each component being separated, with minimal overlaps of content.
+### [1. Code Design](#Component%201%20Code%20Design)
+### [2: Limitations](#Component%202%20Limitations)
+### [3: JUnit Tests](#Component%203%20JUnit%20Tests)
+### [4: Implementations](#Component%204%20Implementation)
 
 
 ## Component #1: Code Design
