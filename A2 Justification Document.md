@@ -1,3 +1,6 @@
+
+
+
 ## Component #1: Code Design
 ### Refactoring:
 Example taken from lecture slides
