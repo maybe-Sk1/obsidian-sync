@@ -132,9 +132,39 @@ List of bugs:
 11. [x] For all tick-based movement, since the javadocs say 'every 10 ticks', it should not move on the initial tick so the operation used: 
 	- "tick % 10 == 0" must be changed to
 	- "tick % 10 == 0 && tick != 0" 
+		For:
+		`if (tick % 10 == 0 && tick != 0) {`  
+		    `y++; // Move downward`  
+		`}`
 	This change is implemented to:
 	1. Descending Enemies
 	2. Powerups
+12. [x] General limitations to GameModel:
+	1. Implement 'statsTracker' input for gameModel 
+	2. Implement Verbose variable, and getVerbose method
+	3. Implement isGameOver method
+	4. Add recordShotFired to fireBullet
+	5. Add recordShotHit to collision
+	6. Implement achievements on each tick
+13. [x] General limitations to GameController
+	1. Implement getModel
+	2. Implement getStatsTracker
+		1. Requires implementing gameModel.getStatsTracker.
+	3. Implement RefreshAchievements
+		1. Catch the edge case of going over-progress of achievements
+	4. Implement fix of two bullets hitting an object at the same time
+14. [x] GameModel.spawnobjects must not spawn when another object occupies space
+	Fix:
+	- Check if an object is in a space before spawning
+	- Created a new method to return a Boolean if an object already is occupying the space
+	- ![](Pasted%20image%2020250520124649.png)
+	- Implemented a check before each spawning action, ensuring no object is at that position
+	- ![](Pasted%20image%2020250520124954.png)
+	- 
+15. [x] Remove the logged output when firing a bullet
+	- Fix: Remove the following line from gameModel.fireBullet()
+		![](Pasted%20image%2020250519144008.png)
+16. [ ] 
 
 
 ------
@@ -158,26 +188,7 @@ List of bugs:
 	4. Implement GameAchievement class
 	5. Implement FileHandler class
 	6. Implement PlayerStats tracker
-2. [ ] Implement missing methods in GameModel
-	1. Implement 'statsTracker' input for gameModel 
-	2. Implement Verbose variable, and getVerbose method
-	3. Implement isGameOver method
-	4. Implement 
-	5. Add recordShotFired to fireBullet
-	6. Add recordShotHit to collision
-	7. Implement achievements on each tick
-	8. Imple
-3. [ ] Implement missing methods in GameController
-	1. Implement getModel
-		1. 
-			
-	2. Implement getStatsTracker
-		1. Requires implementing gameModel.getStatsTracker.
-	3. Implement RefreshAchievements
-		1. Catch the edge case of going over-progress of achievements
-	4. Implement fix of two bullets hitting an object at the same time
-	5. 
-4. [ ] Implement Assets folder
-5. [ ] Implement fix to check collistion
+2. [ ] Implement Assets folder
+3. [ ] Implement fix to check collistion
 	1. Remove bullet when collide with asteroid
-6. [ ] Implement 
+4. [ ] Implement 

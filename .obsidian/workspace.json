@@ -15,7 +15,8 @@
               "state": {
                 "file": "Readme.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": false
               },
               "icon": "lucide-file",
               "title": "Readme"
@@ -170,17 +171,17 @@
   },
   "active": "914d3deae1996fb1",
   "lastOpenFiles": [
+    "Pasted image 20250520124954.png",
+    "Pasted image 20250520124649.png",
+    "Pasted image 20250520124646.png",
+    "Pasted image 20250519144008.png",
+    "Pasted image 20250519141947.png",
     "Pasted image 20250519141005.png",
     "Pasted image 20250519140925.png",
     "Pasted image 20250519140825.png",
     "Pasted image 20250519132919.png",
     "Pasted image 20250519124234.png",
     "Pasted image 20250519124214.png",
-    "Pasted image 20250519123049.png",
-    "Pasted image 20250519121624.png",
-    "Pasted image 20250519121604.png",
-    "Pasted image 20250519121556.png",
-    "Comparison.png",
     "obsidian-sync",
     "Untitled 1.md",
     "Untitled.md",
