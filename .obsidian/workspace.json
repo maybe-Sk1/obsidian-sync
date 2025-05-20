@@ -156,7 +156,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -171,6 +172,11 @@
   },
   "active": "914d3deae1996fb1",
   "lastOpenFiles": [
+    "Pasted image 20250520134132.png",
+    "Pasted image 20250520133819.png",
+    "Pasted image 20250520133748.png",
+    "Pasted image 20250520133703.png",
+    "Pasted image 20250520133415.png",
     "Pasted.md",
     "Readme.md",
     "Pasted image 20250520124954.png",
@@ -179,10 +185,6 @@
     "Pasted image 20250519144008.png",
     "Pasted image 20250519141947.png",
     "Pasted image 20250519141005.png",
-    "Pasted image 20250519140925.png",
-    "Pasted image 20250519140825.png",
-    "Pasted image 20250519132919.png",
-    "Pasted image 20250519124234.png",
     "obsidian-sync",
     "Untitled 1.md",
     "Untitled.md",

@@ -1,4 +1,38 @@
 ## Component #1: Code Design
+### Refactoring:
+Example taken from lecture slides
+- ![](Pasted%20image%2020250520133415.png)
+1. [x] Tick movement if statement refactored to become a helper method
+	- ![](Pasted%20image%2020250520133748.png)
+	- Becomes
+	- ![](Pasted%20image%2020250520133819.png)
+2. [ ] Unreadable return statements being refactored
+	1. ![](Pasted%20image%2020250520134132.png)
+
+
+### HELP Principles
+#### High Cohesion:
+Game Model has way too many responsibilities, as it manages:
+1. The Game State
+2. Handling Collisions
+3. Spawning Objects
+4. Tracking Achievements
+
+To ensure game model has higher cohesion, we can split up these responsibilities into more focused / direct classes
+1. CollisionManager
+	1. Handles the collision of entities, 
+2. SpawnManager
+	1. Handles the spawning of objects 
+3. LevelManager
+	1. 
+#### Encapsulation
+The majority of methods have sufficient encapsulation that prevent methods being exposed for direct access however, there were two notable methods that needed to be fixed:
+1. Direct access to spaceObjects was granted through getSpaceObjects, which exposed the internal list of spaceObjects.
+	- To fix this, ..... **
+#### Low Coupling
+
+#### Polymorphism
+Redundant code with large handle time can be refactored using polymorphism by splitting the behavior of the class to separate subclasses.
 
 
 Optimisations:
@@ -177,7 +211,7 @@ List of bugs:
 
 ## Component 4: Implementation
 
-1. [ ] Achievement package must be implemented
+1. [x] Achievement package must be implemented
 	1. Implement Achievement interface
 		``` 
 		public interface Achievement { ... }
@@ -187,7 +221,6 @@ List of bugs:
 	4. Implement GameAchievement class
 	5. Implement FileHandler class
 	6. Implement PlayerStats tracker
-2. [ ] Implement Assets folder
-3. [ ] Implement fix to check collistion
+2. [x] Implement Assets folder
+3. [x] Implement fix to check collistion
 	1. Remove bullet when collide with asteroid
-4. [ ] Implement 
