@@ -164,7 +164,6 @@ List of bugs:
 15. [x] Remove the logged output when firing a bullet
 	- Fix: Remove the following line from gameModel.fireBullet()
 		![](Pasted%20image%2020250519144008.png)
-16. [ ] 
 
 
 ------
