@@ -44,9 +44,9 @@ List of bugs:
 	Fix method:
 	
 	- When a bullet is fired, both it and the moving enemies are dependent on the current tick
-		![[Pasted image 20250518182301.png]]
+		![](Pasted%20image%2020250518182301.png)
 	  But it is this very fact, that results in an issue when **both objects move in the same tick**. For example:
-		![[Comparison.png]]
+		![](Comparison.png)
 	  Given that the only result of this bug is the bullet being one position above the enemy, we can fix this by checking if a bullet is above the enemy at any time, and if so, flag this as the same collision
 	  
 	  This should work without fault, as there is no edge cases where the bullet would be above an enemy without it meaning to collide with it.
@@ -70,7 +70,7 @@ List of bugs:
 	- Implement a (working) catch case for the enter key that will then allow the game to start once pressed
 		- Thus, create a hasStarted Boolean that will detemine if onTIck(tick) and handlePlayerInput(tick) will run
 		- Implement a check for both of these functions to block the method's functionality
-			- ![[Pasted image 20250519124214.png]]
+			- ![](Pasted%20image%2020250519124214.png)
 			- ![[Pasted image 20250519124234.png]]
 
 
@@ -115,7 +115,7 @@ List of bugs:
 	- "When the game is paused, only un-pausing should be possible. No other action of printing should occur."
 	Fix:
 	- Use return statement to break out of the method if the game is paused, hence blocking all input aside from un-pausing the game.
-	- ![[Pasted image 20250519132919.png]]
+	- ![](Pasted%20image%2020250519132919.png)
 	
 	Fix:
 	- Like the gameStarting block, create an if statement that blocks the functionality of the handlePlayerInput function if the game is paused
@@ -123,9 +123,9 @@ List of bugs:
 	1. 
 9. [x] Remove the string output for powerups:
 	1. HealthPowerUP
-		![[Pasted image 20250519140825.png]]
+		![](Pasted%20image%2020250519140825.png)
 	2. ShieldPowerUp
-		![[Pasted image 20250519141005.png]]
+		![](Pasted%20image%2020250519141005.png)
 10. [x] Implement descending movement for powerups
 	fix:
 	- Change the actions on tick to move downwards every 10 ticks
