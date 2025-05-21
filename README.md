@@ -1,6 +1,9 @@
 # A2 Justification Document
 
 #### This document is structured with each component being separated, with minimal overlaps of content.
+
+Due to converting to pdf, images are removed.
+View images via https://github.com/maybe-Sk1/obsidian-sync/blob/main/README.md
 #### In each section, most information is structed like:
 1. Title / Topic
 	Brief Description
